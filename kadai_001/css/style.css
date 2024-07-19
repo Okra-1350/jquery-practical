@@ -1,0 +1,234 @@
+/* pc,スマホ共通 */
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+body {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* pc */
+.header-nav {
+  width: 60%;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.header-logo > a {
+  font-size: 34px;
+  text-decoration: none;
+}
+
+a:link {
+  color: #000000;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:hover {
+  color: #000000;
+}
+a:active {
+  color: #000000;
+}
+
+.header-logo1 {
+  border: solid 1px #000000;
+}
+
+.header-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.header-menu > a {
+  font-size: 34px;
+  text-decoration: none;
+
+}
+
+
+
+/* section-center------------------------------------------------------- */
+.section-center {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* .section-center　フェードインつけるため、、、 */
+.section-center {
+  opacity : 0;
+  transition : all 1s;
+} 
+
+.section-center.active{
+  opacity : 1;
+  /* transform : translate(0, 0);
+  transform : translate(0, 100px); */
+}
+
+.section-container-about {
+  display: flex;
+/*  justify-content: space-between;*/
+    justify-content: center;
+    gap: 60px;
+}
+
+.section-container-works {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.section-title {
+  font-size: 34px;
+  text-align: center;
+}
+
+.about-item > img {
+  border-radius: 50%;
+}
+
+.works-item {
+  margin: 0 5px;
+  width: 30%;
+}
+
+/* モーダル--------------------------------- */
+/* モーダルのスタイル */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* 背景色 */
+  opacity: 0; /* 初期状態では透明 */
+  visibility: hidden; /* 初期状態では不可視 */
+  transition: opacity 0.5s, visibility 0.5s; /* アニメーション効果 */
+}
+
+/* モーダルの画像スタイル */
+.modal-content {
+  display: block;
+  width: 80%;
+  height: 80%;
+}
+
+/* モーダルの閉じるボタン */
+#close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* footer-------------------------------------------------- */
+
+.footer-copyright {
+  text-align: center;
+}
+
+/* スマホ */
+@media screen and (max-width: 767px) {
+
+  .header-nav {
+    width: 90%;
+    flex-wrap:wrap;
+  }
+
+  .section-center {
+    width: 90%;
+  }
+
+  .section-container-about {
+    flex-wrap: wrap;
+/*    flex-direction: column;*/
+  }
+
+
+  .section-container-works {
+    flex-direction: column;
+  }
+
+  .about-item {
+
+  }
+
+  .works-item { 
+/*    text-align: center;*/
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+/* width: fit-content;
+ */
+
+/* 
+flex-direction: column;
+    align-items: center;
+*/
+
+/* 
+display: block;
+    width: 100%;
+    margin: 0 auto;
+*/
+
+/* 
+display: block;
+align-items: center;
+justify-content: center;
+ */
+
+
+.page-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  opacity:0;
+  transform:translateY(100%) scale(0.5);
+  visibility:hidden;
+  transition:all 0.5s ease;
+}
+.page-top a{
+  display:inline-block;
+  background:#000;
+  color:#fff;
+  border-radius:50%;
+  aspect-ratio:1 / 1;
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  padding:5px;
+}
+.page-top.is-show{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  visibility:visible;
+}
+
